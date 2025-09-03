@@ -1,4 +1,4 @@
-﻿from dataclasses import dataclass
+﻿from dataclasses import dataclass, field
 from typing import List
 
 from Card import Card
@@ -6,6 +6,6 @@ from Card import Card
 
 @dataclass
 class Player:
-    idx: int
+    id: int
     name: str
     hand: List[Card] = field(default_factory=list)
