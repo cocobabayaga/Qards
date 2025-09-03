@@ -20,6 +20,11 @@ title_text = "QARDS"
 title_surface = font.render(title_text, True, (255, 255, 255))
 title_rect = title_surface.get_rect(center=(screen_width // 2, font_size // 2 + 10))
 
+# Game initialization
+from Game import Game
+game = Game()
+game.init_and_shuffle_deck()
+
 running = True
 
 # Game loop
@@ -29,7 +34,7 @@ while running:
            (event.type == pygame.KEYDOWN and event.key == pygame.K_ESCAPE):
             running = False
 
-    screen.fill((0, 0, 0))  # Clear screen with black
+    screen.fill((39, 59, 50))  # Clear screen with Casino green
     screen.blit(title_surface, title_rect)  # Draw title
 
     pygame.display.flip()
