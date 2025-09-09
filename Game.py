@@ -6,9 +6,12 @@ class Game:
         self.deck = []
         self.shuffled_deck = []
 
-    def init_and_shuffle_deck(self):
-        self.deck = [f'{rank} of {suit}' for suit in SUITS for rank in RANKS]
-        self.deck += ['Red Joker', 'Black Joker']
+    def init_and_shuffle_deck(self, num_decks=2):
+        self.deck = []
+        for _ in range(num_decks):
+            self.deck += [f'{rank} of {suit}' for suit in SUITS for rank in RANKS]
+
+        #self.deck += ['Red Joker', 'Black Joker']
         self.deck += SPECIALS  # Add special cards
         self.shuffled_deck = self.deck.copy()
         random.shuffle(self.shuffled_deck)

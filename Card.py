@@ -12,7 +12,7 @@ ENTANGLEMENT = "Entanglement"
 SPECIALS = [CRYOSTAT, SUPERFLUID, SPIN, SUPERCONDUCTION, ENTANGLEMENT]
 
 # Normal ranks and suits
-RANKS = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"]
+RANKS = ["A", "2", "3", "4", "5"]
 SUITS = ["♠", "♥", "♦", "♣"]
 
 # Value map for superconduction
