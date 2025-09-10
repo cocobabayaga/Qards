@@ -24,6 +24,7 @@ title_rect = title_surface.get_rect(center=(screen_width // 2, font_size // 2 + 
 from Game import Game
 game = Game()
 game.init_and_shuffle_deck()
+game.deal_cards(4, 8)
 
 running = True
 
@@ -33,7 +34,6 @@ while running:
         if event.type == pygame.QUIT or \
            (event.type == pygame.KEYDOWN and event.key == pygame.K_ESCAPE):
             running = False
-
     screen.fill((39, 59, 50))  # Clear screen with Casino green
     screen.blit(title_surface, title_rect)  # Draw title
 

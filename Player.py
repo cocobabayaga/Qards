@@ -6,6 +6,6 @@ from Card import Card
 
 @dataclass
 class Player:
-    id: int
-    name: str
-    hand: List[Card] = field(default_factory=list)
+    def __init__(self, id):
+        self.id = id
+        self.hand = []
