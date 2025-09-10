@@ -28,6 +28,11 @@ class Game:
                     player.hand.append(self.shuffled_deck.pop(0))
         return players
 
+    def winCondition:
+        if len(hand) == 0:
+            return True
+        else:
+            return False
 
 
 if __name__ == "__main__":
