@@ -13,7 +13,7 @@ class Game:
             self.deck += [f'{rank} of {suit}' for suit in SUITS for rank in RANKS]
 
         self.deck += SPECIALS
-        self.shuffled_deck = self.deck.copy()
+        self.shuffled_deck = self.deck.copy() #TODO: shuffle the already init deck when playing multiple rounds
         random.shuffle(self.shuffled_deck)
 
     def show_deck(self):
