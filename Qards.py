@@ -25,12 +25,16 @@ from Game import Game
 game = Game()
 game.init_and_shuffle_deck()
 game.deal_cards(4, 8)
+for player in game.players:
+    print(f"Player {player.id} hand: {player.hand}")
 
 running = True
 
 # Game loop
 while running:
     for event in pygame.event.get():
+
+
         if event.type == pygame.QUIT or \
            (event.type == pygame.KEYDOWN and event.key == pygame.K_ESCAPE):
             running = False

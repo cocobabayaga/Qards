@@ -4,6 +4,7 @@ from Player import Player
 
 class Game:
     def __init__(self):
+        self.players = []
         self.deck = []
         self.shuffled_deck = []
 
@@ -21,13 +22,15 @@ class Game:
             print(card)
 
     def deal_cards(self, num_players=4, cards_per_player=8):
-        players = [Player(id + 1) for id in range(num_players)]
+        self.players = [Player(id + 1) for id in range(num_players)]
         for _ in range(cards_per_player):
-            for player in players:
+            for player in self.players:
                 if self.shuffled_deck:
                     player.hand.append(self.shuffled_deck.pop(0))
-        return players
+        return self.players
 
+    def decide_starting_player(self, players):
+        return random.choice(players)
 
 
 if __name__ == "__main__":
